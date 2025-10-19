@@ -1,0 +1,4 @@
+[
+    { "id": "evt001", "title": "Concert Annuel Solencoeur", "date": "2025-12-15T20:00:00Z", "location": "Le Pari, Tarbes", "description": "Notre grand concert annuel reprenant les classiques de la chanson française militante.", "link": "https://www.helloasso.com/associations/solencoeur/evenements/concert-annuel-2025" },
+    { "id": "evt002", "title": "Fête de la Musique", "date": "2026-06-21T18:00:00Z", "location": "Place de la Mairie, Tarbes", "description": "Retrouvez-nous pour une prestation en plein air.", "link": "" }
+]

@@ -1,0 +1,17 @@
+{
+    "logoUrl": "assets/logo.png",
+    "contactEmail": "contact@solencoeur.fr",
+    "colors": {
+        "primary": "#FF7043",
+        "primaryDark": "#F4511E",
+        "secondary": "#5C6BC0",
+        "text": "#333",
+        "background": "#FDFEFE"
+    },
+    "media": {
+        "videos": [
+            { "id": "dQw4w9WgXcQ", "title": "Extrait Concert 1 (Faux lien)" },
+            { "id": "3JZ_D3ELwOQ", "title": "Répétition (Faux lien)" }
+        ]
+    }
+}
