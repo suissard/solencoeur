@@ -157,7 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
             for (const sectionId in backgroundImages) {
                 const section = document.getElementById(sectionId);
                 if (section) {
-                    section.style.backgroundImage = `url(${backgroundImages[sectionId]})`;
+                    const bgElement = section.querySelector('.parallax-bg');
+                    if (bgElement) {
+                        bgElement.style.backgroundImage = `url(${backgroundImages[sectionId]})`;
+                    }
                 }
             }
         } catch (error) {
