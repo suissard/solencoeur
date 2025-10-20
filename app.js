@@ -149,9 +149,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Chargement initial des données dynamiques ---
+    async function loadBackgroundImages() {
+        try {
+            const response = await fetch('config.json');
+            const config = await response.json();
+            const backgroundImages = config.backgroundImages;
+            for (const sectionId in backgroundImages) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.style.backgroundImage = `url(${backgroundImages[sectionId]})`;
+                }
+            }
+        } catch (error) {
+            console.error('Failed to load background images:', error);
+        }
+    }
+
     loadNews();
     loadMedia();
     setupContactLink();
     loadSupporters();
+    loadBackgroundImages();
 
+    const newsList = document.getElementById('news-list');
+    const leftBtn = document.querySelector('.scroll-btn.left');
+    const rightBtn = document.querySelector('.scroll-btn.right');
+
+    if (newsList && leftBtn && rightBtn) {
+        const scrollAmount = 320; // width of a card + gap
+
+        leftBtn.addEventListener('click', () => {
+            newsList.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        rightBtn.addEventListener('click', () => {
+            newsList.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    }
 });

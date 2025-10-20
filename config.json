@@ -18,5 +18,13 @@
         { "name": "Partenaire 1", "logoUrl": "https://via.placeholder.com/150x80?text=Soutien+1" },
         { "name": "Partenaire 2", "logoUrl": "https://via.placeholder.com/150x80?text=Soutien+2" },
         { "name": "Partenaire 3", "logoUrl": "https://via.placeholder.com/150x80?text=Soutien+3" }
-    ]
+    ],
+    "backgroundImages": {
+        "accueil": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMG11c2ljfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000",
+        "association": "https://images.unsplash.com/photo-1627407660693-44e25fb20615?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFja2dyb3VuZCUyMG11c2ljfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000",
+        "news": "https://images.unsplash.com/photo-1674474117688-0aa40d5fd11b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJhY2tncm91bmQlMjBtdXNpY3xlbnwwfHwwfHx8MA==&fm=jpg&q=60&w=3000",
+        "media": "https://images.unsplash.com/photo-1613206484186-6b8dc0605c86?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhY2tncm91bmQlMjBtdXNpY3xlbnwwfHwwfHx8MA==&fm=jpg&q=60&w=3000",
+        "soutenir": "https://images.unsplash.com/photo-1669110302465-0fca5e1e007a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhY2tncm91bmQlMjBtdXNpY3xlbnwwfHwwfHx8MA==&fm=jpg&q=60&w=3000",
+        "contact": "https://images.unsplash.com/photo-1695372475856-44fe02ede60f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJhY2tncm91bmQlMjBtdXNpY3xlbnwwfHwwfHx8MA==&fm=jpg&q=60&w=3000"
+    }
 }
