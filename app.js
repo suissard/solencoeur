@@ -154,15 +154,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('config.json');
             const config = await response.json();
             const backgroundImages = config.backgroundImages;
-            for (const sectionId in backgroundImages) {
-                const section = document.getElementById(sectionId);
-                if (section) {
+
+            const sections = document.querySelectorAll('main > section');
+            const imageKeys = Object.keys(backgroundImages);
+            let imageIndex = 0;
+
+            sections.forEach((section, index) => {
+                if (index % 2 === 0 && imageIndex < imageKeys.length) {
+                    const key = imageKeys[imageIndex];
+                    const imageUrl = backgroundImages[key];
                     const bgElement = section.querySelector('.parallax-bg');
                     if (bgElement) {
-                        bgElement.style.backgroundImage = `url(${backgroundImages[sectionId]})`;
+                        bgElement.style.backgroundImage = `url(${imageUrl})`;
                     }
+                    imageIndex++;
                 }
-            }
+            });
         } catch (error) {
             console.error('Failed to load background images:', error);
         }
@@ -179,20 +186,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightBtn = document.querySelector('.scroll-btn.right');
 
     if (newsList && leftBtn && rightBtn) {
-        const scrollAmount = 320; // width of a card + gap
+        const scrollToNextArticle = (direction) => {
+            const articles = newsList.querySelectorAll('article.card');
+            if (articles.length === 0) return;
 
-        leftBtn.addEventListener('click', () => {
-            newsList.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
+            const containerWidth = newsList.offsetWidth;
+            const currentScroll = newsList.scrollLeft;
 
-        rightBtn.addEventListener('click', () => {
-            newsList.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
+            let targetArticle = null;
+
+            if (direction === 'right') {
+                targetArticle = Array.from(articles).find(article => {
+                    const articleLeft = article.offsetLeft;
+                    return articleLeft > currentScroll + 1; // +1 to avoid floating point issues
+                });
+            } else { // direction === 'left'
+                const visibleArticles = Array.from(articles).filter(article => {
+                    const articleLeft = article.offsetLeft;
+                    return articleLeft < currentScroll - 1;
+                });
+                targetArticle = visibleArticles.length > 0 ? visibleArticles[visibleArticles.length - 1] : articles[0];
+            }
+
+            if (targetArticle) {
+                newsList.scrollTo({
+                    left: targetArticle.offsetLeft,
+                    behavior: 'smooth'
+                });
+            }
+        };
+
+        leftBtn.addEventListener('click', () => scrollToNextArticle('left'));
+        rightBtn.addEventListener('click', () => scrollToNextArticle('right'));
     }
 });

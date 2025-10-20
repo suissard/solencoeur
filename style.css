@@ -218,11 +218,11 @@ header {
 }
 
 .scroll-btn.left {
-    left: 10px;
+    left: 0;
 }
 
 .scroll-btn.right {
-    right: 10px;
+    right: 0;
 }
 
 /* --- Footer --- */
