@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- B. Logique applicative ---
 
-    const mainContent = document.getElementById('main-content');
     const mainNav = document.getElementById('main-nav');
-    const navLinks = mainNav.querySelectorAll('a');
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = mainNav.querySelectorAll('a');
 
     // Gestion du Menu Mobile
     mobileMenuBtn.addEventListener('click', () => {
@@ -21,115 +20,69 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    async function loadContent(pageName) {
-        try {
-            const response = await fetch(`views/${pageName}.html`);
-            if (!response.ok) {
-                throw new Error('View not found');
+    // --- Smooth Scroll ---
+    navLinks.forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
-            const viewHtml = await response.text();
-            mainContent.innerHTML = viewHtml;
-
-            // Mettre à jour le lien actif
-            updateActiveLink(pageName);
-
-            // Exécuter les scripts spécifiques à la page après l'injection du HTML
-            if (pageName === 'agenda') await loadAgenda();
-            if (pageName === 'blog') await loadBlog();
-            if (pageName === 'media') await loadMedia();
-            if (pageName === 'contact') await setupContactForm();
-
-            // Accessibilité : focus sur le contenu principal
-            mainContent.focus();
-            window.scrollTo(0, 0);
-
-        } catch (error) {
-            console.error('Failed to load page:', error);
-            const response = await fetch(`views/404.html`);
-            mainContent.innerHTML = await response.text();
-        }
-    }
-
-
-    function navigate() {
-        const pageName = window.location.hash.substring(1) || 'accueil';
-        loadContent(pageName);
-    }
-
-    function updateActiveLink(pageName) {
-        navLinks.forEach(link => {
-            link.classList.toggle('active', link.hash === `#${pageName}`);
         });
-    }
-
-    // Écouteurs pour la navigation
-    window.addEventListener('hashchange', navigate);
-    document.body.addEventListener('click', e => {
-        if (e.target.matches('a[href^="#"]')) {
-            // Pour les clics directs sur les liens de navigation
-            const pageName = e.target.hash.substring(1);
-            // Le hashchange event s'occupera du reste
-        }
     });
 
     // --- Fonctions de rendu des données ---
-    async function loadAgenda() {
-        const container = document.getElementById('agenda-list');
+    async function loadNews() {
+        const container = document.getElementById('news-list');
         if (!container) return;
 
         try {
-            const response = await fetch('data/agenda.json');
-            const agendaData = await response.json();
+            const response = await fetch('data/news.json');
+            const newsData = await response.json();
 
-            const sortedEvents = [...agendaData].sort((a, b) => new Date(b.date) - new Date(a.date));
+            const sortedNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-            if (sortedEvents.length === 0) {
-                container.innerHTML = "<p>Aucun événement programmé pour le moment.</p>";
+            if (sortedNews.length === 0) {
+                container.innerHTML = "<p>Aucune actualité pour le moment.</p>";
                 return;
             }
 
-            container.innerHTML = sortedEvents.map(event => `
-                <article class="card">
-                    <div class="card-content">
-                        <h3>${event.title}</h3>
-                        <p><strong>Date :</strong> ${new Date(event.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
-                        <p><strong>Lieu :</strong> ${event.location}</p>
-                        <p>${event.description}</p>
-                    </div>
-                    ${event.link ? `<div class="card-actions">
-                        <a href="${event.link}" target="_blank" rel="noopener" class="btn btn-secondary">Plus d'infos / Billets</a>
-                    </div>` : ''}
-                </article>
-            `).join('');
+            container.innerHTML = sortedNews.map(item => {
+                if (item.type === 'event') {
+                    return `
+                        <article class="card">
+                            <div class="card-content">
+                                <h3>${item.title}</h3>
+                                <p><strong>Date :</strong> ${new Date(item.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                                <p><strong>Lieu :</strong> ${item.location}</p>
+                                <p>${item.description}</p>
+                            </div>
+                            ${item.link ? `<div class="card-actions">
+                                <a href="${item.link}" target="_blank" rel="noopener" class="btn btn-secondary">Plus d'infos / Billets</a>
+                            </div>` : ''}
+                        </article>
+                    `;
+                } else {
+                    return `
+                        <article class="card">
+                            <div class="card-content">
+                                <h3>${item.title}</h3>
+                                <p class="text-light"><small>Publié le ${new Date(item.date).toLocaleDateString('fr-FR')}</small></p>
+                                <p>${item.excerpt}</p>
+                            </div>
+                            <div class="card-actions">
+                                <a href="#news/${item.id}" class="btn btn-secondary" onclick="event.preventDefault(); alert('Page de détail de l\\'actualité à implémenter');">Lire la suite</a>
+                            </div>
+                        </article>
+                    `;
+                }
+            }).join('');
         } catch (error) {
-            console.error('Failed to load agenda data:', error);
-            container.innerHTML = "<p>Erreur lors du chargement de l'agenda.</p>";
-        }
-    }
-
-    async function loadBlog() {
-        const container = document.getElementById('blog-list');
-        if (!container) return;
-        try {
-            const response = await fetch('data/blog.json');
-            const blogData = await response.json();
-            const sortedPosts = [...blogData].sort((a, b) => new Date(b.date) - new Date(a.date));
-            container.innerHTML = sortedPosts.map(post => `
-                <article class="card">
-                    <div class="card-content">
-                        <h3>${post.title}</h3>
-                        <p class="text-light"><small>Publié le ${new Date(post.date).toLocaleDateString('fr-FR')}</small></p>
-                        <p>${post.excerpt}</p>
-                    </div>
-                    <div class="card-actions">
-                        <a href="#blog/${post.id}" class="btn btn-secondary" onclick="event.preventDefault(); alert('Page de détail de l\\'article à implémenter');">Lire la suite</a>
-                    </div>
-                </article>
-            `).join('');
-        }
-        catch (error) {
-            console.error('Failed to load blog data:', error);
-            container.innerHTML = "<p>Erreur lors du chargement du blog.</p>";
+            console.error('Failed to load news data:', error);
+            container.innerHTML = "<p>Erreur lors du chargement des actualités.</p>";
         }
     }
 
@@ -163,25 +116,42 @@ document.addEventListener('DOMContentLoaded', () => {
             container.innerHTML = "<p>Erreur lors du chargement des médias.</p>";
         }
     }
-    async function setupContactForm() {
-        const form = document.getElementById('contact-form');
-        if (!form) return;
-        const response = await fetch('config.json');
-        const config = await response.json();
-        const contactEmail = config.contactEmail;
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+    async function setupContactLink() {
+        const contactLink = document.getElementById('contact-link');
+        if (!contactLink) return;
+        try {
+            const response = await fetch('config.json');
+            const config = await response.json();
+            const contactEmail = config.contactEmail;
             const subject = "Message depuis le site Solencoeur";
-            const mailtoLink = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-            window.location.href = mailtoLink;
-        });
+            contactLink.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`;
+        } catch (error) {
+            console.error('Failed to setup contact link:', error);
+            contactLink.href = "#";
+            contactLink.textContent = "Erreur de configuration";
+        }
     }
 
-    // Chargement initial
-    navigate();
+    async function loadSupporters() {
+        const container = document.getElementById('supporters-logos');
+        if (!container) return;
+        try {
+            const response = await fetch('config.json');
+            const config = await response.json();
+            const supporters = config.supporters;
+            container.innerHTML = supporters.map(supporter => `
+                <img src="${supporter.logoUrl}" alt="${supporter.name}" style="height: 80px; margin: 10px;">
+            `).join('');
+        } catch (error) {
+            console.error('Failed to load supporters data:', error);
+            container.innerHTML = "<p>Erreur lors du chargement des soutiens.</p>";
+        }
+    }
 
+    // --- Chargement initial des données dynamiques ---
+    loadNews();
+    loadMedia();
+    setupContactLink();
+    loadSupporters();
 
 });

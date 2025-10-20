@@ -22,11 +22,9 @@
             
             <nav id="main-nav">
                 <ul>
-                    <!-- Les liens utilisent le hash (#) pour le routeur JS -->
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#association">L'Association</a></li>
-                    <li><a href="#agenda">Agenda</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#news">Actualités</a></li>
                     <li><a href="#media">Média</a></li>
                     <li><a href="#soutenir">Nous soutenir</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -38,18 +36,90 @@
         </div>
     </header>
 
-    <!-- Le contenu des pages sera injecté ici par le JavaScript -->
-    <main id="main-content" tabindex="-1">
-        <!-- Chargement initial -->
-        <div class="loader">Chargement...</div>
+    <main>
+        <section id="accueil" class="container">
+            <h1>Solencoeur : Chanter pour le Vivre Ensemble</h1>
+            <p class="lead">Nous sommes un chœur associatif de Tarbes, militant pour l'inclusion et l'accessibilité à travers le répertoire de la chanson française.</p>
+            <div class="card-actions">
+                <a href="#news" class="btn btn-primary">Voir nos actualités</a>
+                <a href="#association" class="btn btn-secondary">Découvrir l'asso</a>
+            </div>
+        </section>
+
+        <section id="association" class="container">
+            <h2>Notre Association</h2>
+            <p>La mission de Solencoeur est de "témoigner du Vivre Ensemble". Nous croyons que le chant choral est un puissant vecteur d'inclusion, de partage et de militantisme social.</p>
+            <h3>Nos Valeurs</h3>
+            <ul>
+                <li><strong>Inclusion :</strong> Accueillir chacun, quelles que soient ses capacités.</li>
+                <li><strong>Partage :</strong> Transmettre l'émotion de la chanson française.</li>
+                <li><strong>Accessibilité :</strong> Lutter pour que la culture soit accessible à tous.</li>
+            </ul>
+        </section>
+
+        <section id="news" class="container">
+            <h2>Actualités</h2>
+            <div id="news-list" class="grid-container">
+                <!-- Les actualités seront chargées ici -->
+            </div>
+        </section>
+
+        <section id="media" class="container">
+            <h2>Médiathèque</h2>
+            <p>Quelques extraits de nos prestations et répétitions. (Liens YouTube factices pour l'aperçu)</p>
+            <div id="media-gallery" class="grid-container"></div>
+        </section>
+
+        <section id="soutenir" class="container">
+            <h2>Nous Soutenir</h2>
+            <p>Solencoeur vit grâce à l'engagement de ses membres et au soutien de ses partenaires. Chaque don, chaque adhésion compte.</p>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Faire un Don (Exemple)</h3>
+                        <p>Votre don nous aide à financer nos projets et garantir l'accessibilité de nos concerts.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.helloasso.com/associations/solencoeur/formulaires/1" target="_blank" rel="noopener" class="btn btn-primary">Faire un don sécurisé</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Devenir Mécène</h3>
+                        <p>Entreprises, fondations : associez votre image à nos valeurs d'inclusion et de partage.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="assets/dossier-mecenat.pdf" download class="btn btn-secondary">Télécharger le dossier</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Kit Presse</h3>
+                        <p>Journalistes, partenaires, retrouvez ici nos éléments de communication.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="assets/kit-presse.zip" download class="btn btn-secondary">Télécharger le Kit Presse</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container" style="text-align: center;">
+            <h2>Contactez-nous</h2>
+            <p>Pour toute demande (adhésion, prestation, partenariat), n'hésitez pas à nous écrire.</p>
+            <a id="contact-link" href="#" class="btn btn-primary">Envoyer un email</a>
+        </section>
     </main>
 
     <footer>
         <div class="container">
+            <div id="supporters-section">
+                <h3>Nos Soutiens</h3>
+                <div id="supporters-logos">
+                    <!-- Les logos des soutiens seront injectés ici -->
+                </div>
+            </div>
             <p>&copy; 2025 Solencoeur. Tous droits réservés.</p>
-            <p>
-                <a href="#politique-confidentialite">Politique de confidentialité</a>
-            </p>
         </div>
     </footer>
 
