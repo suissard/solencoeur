@@ -15,9 +15,9 @@
         ]
     },
     "supporters": [
-        { "name": "Partenaire 1", "logoUrl": "https://via.placeholder.com/150x80?text=Soutien+1" },
-        { "name": "Partenaire 2", "logoUrl": "https://via.placeholder.com/150x80?text=Soutien+2" },
-        { "name": "Partenaire 3", "logoUrl": "https://via.placeholder.com/150x80?text=Soutien+3" }
+        { "name": "Ville de Tarbes", "logoUrl": "https://upload.wikimedia.org/wikipedia/fr/a/af/Logo_Ville_de_Tarbes.png" },
+        { "name": "Région Occitanie", "logoUrl": "https://upload.wikimedia.org/wikipedia/fr/thumb/8/89/Logo_Occitanie_2017.svg/600px-Logo_Occitanie_2017.svg.png" },
+        { "name": "Préfecture des Hautes-Pyrénées", "logoUrl": "https://upload.wikimedia.org/wikipedia/fr/c/c8/Logo_65_hautes_pyr%C3%A9n%C3%A9es_2009.png" }
     ],
     "backgroundImages": {
         "accueil": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMG11c2ljfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000",
