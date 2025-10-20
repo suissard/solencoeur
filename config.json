@@ -13,5 +13,10 @@
             { "id": "dQw4w9WgXcQ", "title": "Extrait Concert 1 (Faux lien)" },
             { "id": "3JZ_D3ELwOQ", "title": "Répétition (Faux lien)" }
         ]
-    }
+    },
+    "supporters": [
+        { "name": "Partenaire 1", "logoUrl": "https://via.placeholder.com/150x80?text=Soutien+1" },
+        { "name": "Partenaire 2", "logoUrl": "https://via.placeholder.com/150x80?text=Soutien+2" },
+        { "name": "Partenaire 3", "logoUrl": "https://via.placeholder.com/150x80?text=Soutien+3" }
+    ]
 }
