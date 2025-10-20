@@ -298,11 +298,8 @@ footer a:hover {
 /* --- Parallax Sections --- */
 section {
     position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     overflow: hidden;
+    scroll-margin-top: 70px;
 }
 
 section::before {
@@ -313,6 +310,10 @@ section::before {
     right: 0;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
+    filter: blur(5px);
     z-index: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
