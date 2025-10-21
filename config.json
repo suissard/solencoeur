@@ -17,6 +17,12 @@
         "videos": [
             { "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ", "title": "Chanson française classique" },
             { "embedUrl": "https://www.youtube.com/embed/videoseries?list=PL20E8A5DE54D8C429", "title": "Compilation de classiques" }
+        ],
+        "audio": [
+            { "playerUrl": "https://drive.google.com/file/d/1cxZZnyUhZig_pbOUoVsCXYULJSzD6ZRn/preview", "title": "Émission de radio" }
+        ],
+        "documents": [
+            { "documentUrl": "https://docs.google.com/document/d/10xXA6FJwUmaZr9KE749N8s1uOvynPJIfuHlsxSJ4c1c/edit?usp=drivesdk", "title": "Dossier de mécénat" }
         ]
     },
     "supporters": [
