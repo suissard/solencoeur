@@ -13,6 +13,10 @@
             { "url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop", "title": "Répétition" },
             { "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop", "title": "Concert" },
             { "url": "https://images.unsplash.com/photo-1507838153414-006de08337da?q=80&w=2070&auto=format&fit=crop", "title": "Ensemble" }
+        ],
+        "videos": [
+            { "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ", "title": "Chanson française classique" },
+            { "embedUrl": "https://www.youtube.com/embed/videoseries?list=PL20E8A5DE54D8C429", "title": "Compilation de classiques" }
         ]
     },
     "supporters": [

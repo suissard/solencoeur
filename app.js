@@ -92,8 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch('config.json');
             const config = await response.json();
-            const photos = config.media.photos;
-            container.innerHTML = photos.map(photo => `
+            const photos = config.media.photos || [];
+            const videos = config.media.videos || [];
+
+            const photosHTML = photos.map(photo => `
                 <div class="card">
                     <img src="${photo.url}" alt="${photo.title}" style="width:100%; height:auto;">
                     <div class="card-content">
@@ -101,6 +103,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             `).join('');
+
+            const videosHTML = videos.map(video => `
+                <div class="card">
+                    <div class="video-container">
+                        <iframe src="${video.embedUrl}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>${video.title}</h3>
+                    </div>
+                </div>
+            `).join('');
+
+            const combinedHTML = photosHTML + videosHTML;
+
+            if (combinedHTML) {
+                container.innerHTML = combinedHTML;
+            } else {
+                container.innerHTML = "<p>Aucun média disponible pour le moment.</p>";
+            }
+
         }
         catch (error) {
             console.error('Failed to load media data:', error);
