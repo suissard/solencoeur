@@ -170,24 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    async function setupFacebookLink() {
-        const facebookLink = document.getElementById('facebook-link-hero');
-        if (!facebookLink) return;
-        try {
-            const response = await fetch('config.json');
-            const config = await response.json();
-            const facebookUrl = config.facebookUrl;
-            if (facebookUrl) {
-                facebookLink.href = facebookUrl;
-            } else {
-                facebookLink.style.display = 'none';
-            }
-        } catch (error) {
-            console.error('Failed to setup Facebook link:', error);
-            facebookLink.style.display = 'none';
-        }
-    }
-
     async function loadSupporters() {
         const container = document.getElementById('supporters-logos');
         if (!container) return;
@@ -231,7 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadNews();
     loadMedia();
     setupContactLink();
-    setupFacebookLink();
     loadSupporters();
     loadBackgroundImages();
 
