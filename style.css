@@ -295,6 +295,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espace entre l'icône et le texte */
+}
+
 /* --- Responsive (Mobile) --- */
 @media (max-width: 800px) {
     #main-nav {

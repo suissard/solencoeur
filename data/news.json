@@ -1,34 +1,30 @@
 [
     {
-        "id": "evt001",
-        "type": "event",
-        "title": "Concert Annuel Solencoeur",
-        "date": "2025-12-15T20:00:00Z",
-        "location": "Le Pari, Tarbes",
-        "description": "Notre grand concert annuel reprenant les classiques de la chanson française militante.",
-        "link": "https://www.helloasso.com/associations/solencoeur/evenements/concert-annuel-2025"
-    },
-    {
-        "id": "evt002",
-        "type": "event",
-        "title": "Fête de la Musique",
-        "date": "2026-06-21T18:00:00Z",
-        "location": "Place de la Mairie, Tarbes",
-        "description": "Retrouvez-nous pour une prestation en plein air.",
-        "link": ""
-    },
-    {
-        "id": "post001",
+        "id": "concert-printemps-2025",
         "type": "article",
-        "title": "Bienvenue sur le nouveau site !",
-        "date": "2025-10-20",
-        "excerpt": "Après des semaines de travail, nous sommes fiers de vous présenter le nouveau visage numérique de Solencoeur."
+        "title": "Succès Retentissant pour notre Concert de Printemps !",
+        "date": "2025-05-20",
+        "excerpt": "Revivez les moments forts de notre concert annuel qui a célébré la diversité musicale et le vivre ensemble."
     },
     {
-        "id": "post002",
+        "id": "atelier-decouverte-chant",
         "type": "article",
-        "title": "Retour sur le concert au Pari",
-        "date": "2025-12-18",
-        "excerpt": "Quelle soirée ! Merci à tous d'être venus si nombreux pour partager ce moment d'émotion avec nous."
+        "title": "Atelier Découverte : Une Journée d'Initiation au Chant Choral",
+        "date": "2025-04-15",
+        "excerpt": "La semaine dernière, nous avons ouvert nos portes pour un atelier d'initiation gratuit. Une expérience riche en émotions et en partage !"
+    },
+    {
+        "id": "nouveau-repertoire-2025",
+        "type": "article",
+        "title": "Nouveau Répertoire 2025 : Un Voyage Musical en Perspective",
+        "date": "2025-03-01",
+        "excerpt": "Découvrez en avant-première les pépites musicales que nous vous préparons pour la saison à venir."
+    },
+    {
+        "id": "portrait-choriste-jean",
+        "type": "article",
+        "title": "Rencontre avec Jean, Baryton et Pilier de l'Association",
+        "date": "2025-02-10",
+        "excerpt": "Plongez dans le quotidien d'un de nos membres passionnés. Jean nous raconte son parcours et ce que Solencoeur lui apporte."
     }
 ]

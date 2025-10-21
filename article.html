@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - Solencoeur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques à la page article */
+        #article-content {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .article-meta {
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+        .article-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+        }
+        .article-body p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-shadow">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <strong>Solencoeur</strong>
+            </a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html#accueil">Accueil</a></li>
+                    <li><a href="index.html#association">L'Association</a></li>
+                    <li><a href="index.html#news">Actualités</a></li>
+                    <li><a href="index.html#media">Média</a></li>
+                    <li><a href="index.html#soutenir">Nous soutenir</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="article-content">
+            <div class="container" id="article-container">
+                <!-- Le contenu de l'article sera injecté ici -->
+                <div class="loader">Chargement de l'article...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+             <div class="social-links" style="margin-bottom: 20px;">
+                <a href="https://www.facebook.com/share/17KzQFFdR2/" class="btn btn-secondary" target="_blank" rel="noopener">
+                    Suivez-nous sur Facebook
+                </a>
+            </div>
+            <p>&copy; 2025 Solencoeur. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="article.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+    {
+        "id": "concert-printemps-2025",
+        "title": "Succès Retentissant pour notre Concert de Printemps !",
+        "date": "2025-05-20",
+        "author": "Le Bureau de Solencoeur",
+        "imageUrl": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop",
+        "excerpt": "Revivez les moments forts de notre concert annuel qui a célébré la diversité musicale et le vivre ensemble.",
+        "content": "<p>Quelle soirée mémorable ! Le 18 mai dernier, notre grand concert de printemps a réuni plus de 200 personnes à la salle des fêtes de Tarbes. Sous la direction inspirée de notre cheffe de chœur, nous avons interprété un répertoire éclectique, allant des chants traditionnels bigourdans à des classiques de la variété française, en passant par des rythmes africains endiablés.</p><p>L'énergie du public était palpable et vos applaudissements chaleureux ont été notre plus belle récompense. Cet événement a été l'aboutissement de mois de travail et de passion, et il incarne parfaitement les valeurs de partage qui nous sont chères.</p><p>Un immense merci à tous les bénévoles, à la mairie de Tarbes pour son soutien logistique, et bien sûr, à vous, cher public, d'être venus si nombreux. Rendez-vous l'année prochaine pour de nouvelles aventures musicales !</p>"
+    },
+    {
+        "id": "atelier-decouverte-chant",
+        "title": "Atelier Découverte : Une Journée d'Initiation au Chant Choral",
+        "date": "2025-04-15",
+        "author": "Claire, Cheffe de Chœur",
+        "imageUrl": "https://images.unsplash.com/photo-1593697821088-39392b953835?q=80&w=2070&auto=format&fit=crop",
+        "excerpt": "La semaine dernière, nous avons ouvert nos portes pour un atelier d'initiation gratuit. Une expérience riche en émotions et en partage !",
+        "content": "<p>Le 12 avril, Solencoeur a eu le plaisir d'accueillir une quinzaine de participants curieux pour une journée d'initiation au chant choral. L'objectif ? Démystifier le chant en groupe et montrer que tout le monde peut chanter !</p><p>Entre exercices de respiration ludiques, jeux vocaux et l'apprentissage d'un canon simple à plusieurs voix, les sourires et les rires ont fusé. Beaucoup ont été surpris de découvrir leur propre voix et le plaisir de la faire vibrer à l'unisson avec d'autres. Ce fut un moment de cohésion et de bienveillance, où la performance a laissé place à la simple joie de chanter ensemble.</p><p>Nous espérons que cette expérience aura suscité des vocations. N'hésitez pas à nous contacter si l'aventure vous tente !</p>"
+    },
+    {
+        "id": "nouveau-repertoire-2025",
+        "title": "Nouveau Répertoire 2025 : Un Voyage Musical en Perspective",
+        "date": "2025-03-01",
+        "author": "Le Bureau de Solencoeur",
+        "imageUrl": "https://images.unsplash.com/photo-1507838153414-006de08337da?q=80&w=2070&auto=format&fit=crop",
+        "excerpt": "Découvrez en avant-première les pépites musicales que nous vous préparons pour la saison à venir.",
+        "content": "<p>Qui dit nouvelle saison, dit nouveau répertoire ! L'équipe musicale de Solencoeur travaille d'arrache-pied pour vous concocter un programme 2025 riche et surprenant. Cette année, nous mettons le cap sur l'Amérique Latine, avec des rythmes de cumbia, de bossa nova et de tango qui vous feront voyager.</p><p>Nous n'oublions pas pour autant nos racines, avec de nouvelles harmonisations de chansons françaises intemporelles (saurez-vous deviner lesquelles ?) et quelques chants du monde qui sont la marque de fabrique de notre chœur.</p><p>Les partitions sont distribuées, les premières notes résonnent... Nous avons hâte de vous partager le fruit de notre travail ! Restez à l'écoute pour les dates de nos prochains concerts.</p>"
+    },
+    {
+        "id": "portrait-choriste-jean",
+        "title": "Rencontre avec Jean, Baryton et Pilier de l'Association",
+        "date": "2025-02-10",
+        "author": "La Rédac'",
+        "imageUrl": "https://images.unsplash.com/photo-1558514112-320b28a95d73?q=80&w=1935&auto=format&fit=crop",
+        "excerpt": "Plongez dans le quotidien d'un de nos membres passionnés. Jean nous raconte son parcours et ce que Solencoeur lui apporte.",
+        "content": "<p>Jean, 68 ans, est l'une des voix de baryton que vous pouvez entendre au sein de Solencoeur, et ce, depuis presque la création de l'association. Pour lui, le chœur est bien plus qu'un simple hobby : 'C'est mon bol d'air de la semaine', nous confie-t-il. 'On laisse les soucis à la porte, et pendant deux heures, il n'y a que la musique et la camaraderie qui comptent.'</p><p>Ce qu'il préfère ? 'Le moment magique où les quatre pupitres s'assemblent et où l'harmonie prend forme. C'est un sentiment indescriptible.' Son meilleur souvenir reste le concert en plein air de l'été dernier, 'un moment de grâce partagé avec un public formidable'.</p><p>À travers le témoignage de Jean, c'est l'esprit de Solencoeur qui s'exprime : un mélange de rigueur musicale, de solidarité et, surtout, de beaucoup de chaleur humaine.</p>"
+    }
+]

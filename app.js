@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <p>${item.excerpt}</p>
                             </div>
                             <div class="card-actions">
-                                <a href="#news/${item.id}" class="btn btn-secondary" onclick="event.preventDefault(); alert('Page de détail de l\\'actualité à implémenter');">Lire la suite</a>
+                                <a href="article.html?id=${item.id}" class="btn btn-secondary">Lire la suite</a>
                             </div>
                         </article>
                     `;

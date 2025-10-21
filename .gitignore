@@ -1,0 +1,6 @@
+# Fichiers de log
+server.log
+
+# Fichiers temporaires de l'IDE ou du système
+.DS_Store
+Thumbs.db
