@@ -92,21 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch('config.json');
             const config = await response.json();
-            const videos = config.media.videos;
-            container.innerHTML = videos.map(video => `
+            const photos = config.media.photos;
+            container.innerHTML = photos.map(photo => `
                 <div class="card">
-                    <div style="aspect-ratio: 16/9;">
-                        <iframe
-                            src="https://www.youtube.com/embed/${video.id}"
-                            title="${video.title}"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            style="width:100%; height:100%;">
-                        </iframe>
-                    </div>
+                    <img src="${photo.url}" alt="${photo.title}" style="width:100%; height:auto;">
                     <div class="card-content">
-                        <h3>${video.title}</h3>
+                        <h3>${photo.title}</h3>
                     </div>
                 </div>
             `).join('');
@@ -178,42 +169,43 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSupporters();
     loadBackgroundImages();
 
-    const newsList = document.getElementById('news-list');
-    const leftBtn = document.querySelector('.scroll-btn.left');
-    const rightBtn = document.querySelector('.scroll-btn.right');
+    function setupCarousel(containerSelector, leftBtnSelector, rightBtnSelector) {
+        const container = document.querySelector(containerSelector);
+        const leftBtn = document.querySelector(leftBtnSelector);
+        const rightBtn = document.querySelector(rightBtnSelector);
 
-    if (newsList && leftBtn && rightBtn) {
-        const scrollToNextArticle = (direction) => {
-            const articles = newsList.querySelectorAll('article.card');
-            if (articles.length === 0) return;
+        if (!container || !leftBtn || !rightBtn) return;
 
-            const containerWidth = newsList.offsetWidth;
-            const currentScroll = newsList.scrollLeft;
+        const scrollToNextItem = (direction) => {
+            const items = container.querySelectorAll('.card');
+            if (items.length === 0) return;
 
-            let targetArticle = null;
+            const currentScroll = container.scrollLeft;
+            let targetItem = null;
 
             if (direction === 'right') {
-                targetArticle = Array.from(articles).find(article => {
-                    const articleLeft = article.offsetLeft;
-                    return articleLeft > currentScroll + 1; // +1 to avoid floating point issues
+                targetItem = Array.from(items).find(item => {
+                    return item.offsetLeft > currentScroll + 1;
                 });
             } else { // direction === 'left'
-                const visibleArticles = Array.from(articles).filter(article => {
-                    const articleLeft = article.offsetLeft;
-                    return articleLeft < currentScroll - 1;
+                const visibleItems = Array.from(items).filter(item => {
+                    return item.offsetLeft < currentScroll - 1;
                 });
-                targetArticle = visibleArticles.length > 0 ? visibleArticles[visibleArticles.length - 1] : articles[0];
+                targetItem = visibleItems.length > 0 ? visibleItems[visibleItems.length - 1] : items[0];
             }
 
-            if (targetArticle) {
-                newsList.scrollTo({
-                    left: targetArticle.offsetLeft,
+            if (targetItem) {
+                container.scrollTo({
+                    left: targetItem.offsetLeft,
                     behavior: 'smooth'
                 });
             }
         };
 
-        leftBtn.addEventListener('click', () => scrollToNextArticle('left'));
-        rightBtn.addEventListener('click', () => scrollToNextArticle('right'));
+        leftBtn.addEventListener('click', () => scrollToNextItem('left'));
+        rightBtn.addEventListener('click', () => scrollToNextItem('right'));
     }
+
+    setupCarousel('#news-list', '.news-scroll-btn.left', '.news-scroll-btn.right');
+    setupCarousel('#media-gallery', '.media-scroll-btn.left', '.media-scroll-btn.right');
 });
