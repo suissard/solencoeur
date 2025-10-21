@@ -54,6 +54,10 @@ section .container {
     padding: 40px;
 }
 
+section + section {
+    margin-top: 20px;
+}
+
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -152,6 +156,11 @@ header {
     border-top: 1px solid #eee;
 }
 
+#accueil .card-actions .btn {
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
 /* --- Boutons (Material) --- */
 .btn {
     display: inline-block;
@@ -209,12 +218,26 @@ header {
     display: none; /* Safari and Chrome */
 }
 
-#news-list .card {
+#news-list .card, #media-gallery .card {
     min-width: 300px;
     flex-shrink: 0;
     width: calc(100vw - 60px);
     max-width: 600px;
 }
+
+#media-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+#media-gallery::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
 
 .scroll-btn {
     position: absolute;

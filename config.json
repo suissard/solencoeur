@@ -1,6 +1,6 @@
 {
     "logoUrl": "assets/logo.png",
-    "contactEmail": "contact@solencoeur.fr",
+    "contactEmail": "solencoeur65@gmail.com",
     "colors": {
         "primary": "#FF7043",
         "primaryDark": "#F4511E",
@@ -9,9 +9,10 @@
         "background": "#FDFEFE"
     },
     "media": {
-        "videos": [
-            { "id": "dQw4w9WgXcQ", "title": "Extrait Concert 1 (Faux lien)" },
-            { "id": "3JZ_D3ELwOQ", "title": "Répétition (Faux lien)" }
+        "photos": [
+            { "url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop", "title": "Répétition" },
+            { "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop", "title": "Concert" },
+            { "url": "https://images.unsplash.com/photo-1507838153414-006de08337da?q=80&w=2070&auto=format&fit=crop", "title": "Ensemble" }
         ]
     },
     "supporters": [
@@ -21,10 +22,7 @@
     ],
     "backgroundImages": {
         "accueil": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMG11c2ljfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000",
-        "association": "https://images.unsplash.com/photo-1627407660693-44e25fb20615?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFja2dyb3VuZCUyMG11c2ljfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000",
         "news": "https://images.unsplash.com/photo-1674474117688-0aa40d5fd11b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJhY2tncm91bmQlMjBtdXNpY3xlbnwwfHwwfHx8MA==&fm=jpg&q=60&w=3000",
-        "media": "https://images.unsplash.com/photo-1613206484186-6b8dc0605c86?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhY2tncm91bmQlMjBtdXNpY3xlbnwwfHwwfHx8MA==&fm=jpg&q=60&w=3000",
-        "soutenir": "https://images.unsplash.com/photo-1669110302465-0fca5e1e007a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhY2tncm91bmQlMjBtdXNpY3xlbnwwfHwwfHx8MA==&fm=jpg&q=60&w=3000",
-        "contact": "https://images.unsplash.com/photo-1695372475856-44fe02ede60f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJhY2tncm91bmQlMjBtdXNpY3xlbnwwfHwwfHx8MA==&fm=jpg&q=60&w=3000"
+        "soutenir": "https://images.unsplash.com/photo-1669110302465-0fca5e1e007a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhY2tncm91bmQlMjBtdXNpY3xlbnwwfHwwfHx8MA==&fm=jpg&q=60&w=3000"
     }
 }
