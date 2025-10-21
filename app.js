@@ -94,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const config = await response.json();
             const photos = config.media.photos || [];
             const videos = config.media.videos || [];
+            const audio = config.media.audio || [];
+            const documents = config.media.documents || [];
 
             const photosHTML = photos.map(photo => `
                 <div class="card">
@@ -115,7 +117,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `).join('');
 
-            const combinedHTML = photosHTML + videosHTML;
+            const audioHTML = audio.map(item => `
+                <div class="card">
+                    <div class="video-container">
+                        <iframe src="${item.playerUrl}" allow="autoplay" style="width:100%; height:100px;"></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>${item.title}</h3>
+                    </div>
+                </div>
+            `).join('');
+
+            const documentsHTML = documents.map(doc => `
+                <div class="card">
+                    <div class="card-content">
+                        <h3>${doc.title}</h3>
+                        <p>Cliquez pour voir le document.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="${doc.documentUrl}" target="_blank" rel="noopener" class="btn btn-secondary">Ouvrir le document</a>
+                    </div>
+                </div>
+            `).join('');
+
+            const combinedHTML = photosHTML + videosHTML + audioHTML + documentsHTML;
 
             if (combinedHTML) {
                 container.innerHTML = combinedHTML;
