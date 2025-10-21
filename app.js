@@ -156,18 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const backgroundImages = config.backgroundImages;
 
             const sections = document.querySelectorAll('main > section');
-            const imageKeys = Object.keys(backgroundImages);
-            let imageIndex = 0;
-
-            sections.forEach((section, index) => {
-                if (index % 2 === 0 && imageIndex < imageKeys.length) {
-                    const key = imageKeys[imageIndex];
-                    const imageUrl = backgroundImages[key];
+            sections.forEach(section => {
+                const sectionId = section.id;
+                if (backgroundImages[sectionId]) {
+                    const imageUrl = backgroundImages[sectionId];
                     const bgElement = section.querySelector('.parallax-bg');
                     if (bgElement) {
                         bgElement.style.backgroundImage = `url(${imageUrl})`;
+                        section.style.backgroundColor = 'transparent';
                     }
-                    imageIndex++;
                 }
             });
         } catch (error) {
