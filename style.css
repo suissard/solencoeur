@@ -154,6 +154,21 @@ header {
     gap: 10px;
     padding: 16px 24px;
     border-top: 1px solid #eee;
+    z-index: 1;
+    position: relative;
+}
+
+.card-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 #accueil .card-actions .btn {

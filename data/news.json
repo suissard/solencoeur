@@ -4,27 +4,31 @@
         "type": "article",
         "title": "Succès Retentissant pour notre Concert de Printemps !",
         "date": "2025-05-20",
-        "excerpt": "Revivez les moments forts de notre concert annuel qui a célébré la diversité musicale et le vivre ensemble."
+        "excerpt": "Revivez les moments forts de notre concert annuel qui a célébré la diversité musicale et le vivre ensemble.",
+        "imageUrl": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop"
     },
     {
         "id": "atelier-decouverte-chant",
         "type": "article",
         "title": "Atelier Découverte : Une Journée d'Initiation au Chant Choral",
         "date": "2025-04-15",
-        "excerpt": "La semaine dernière, nous avons ouvert nos portes pour un atelier d'initiation gratuit. Une expérience riche en émotions et en partage !"
+        "excerpt": "La semaine dernière, nous avons ouvert nos portes pour un atelier d'initiation gratuit. Une expérience riche en émotions et en partage !",
+        "imageUrl": "https://images.unsplash.com/photo-1593697821088-39392b953835?q=80&w=2070&auto=format&fit=crop"
     },
     {
         "id": "nouveau-repertoire-2025",
         "type": "article",
         "title": "Nouveau Répertoire 2025 : Un Voyage Musical en Perspective",
         "date": "2025-03-01",
-        "excerpt": "Découvrez en avant-première les pépites musicales que nous vous préparons pour la saison à venir."
+        "excerpt": "Découvrez en avant-première les pépites musicales que nous vous préparons pour la saison à venir.",
+        "imageUrl": "https://images.unsplash.com/photo-1507838153414-006de08337da?q=80&w=2070&auto=format&fit=crop"
     },
     {
         "id": "portrait-choriste-jean",
         "type": "article",
         "title": "Rencontre avec Jean, Baryton et Pilier de l'Association",
         "date": "2025-02-10",
-        "excerpt": "Plongez dans le quotidien d'un de nos membres passionnés. Jean nous raconte son parcours et ce que Solencoeur lui apporte."
+        "excerpt": "Plongez dans le quotidien d'un de nos membres passionnés. Jean nous raconte son parcours et ce que Solencoeur lui apporte.",
+        "imageUrl": "https://images.unsplash.com/photo-1558514112-320b28a95d73?q=80&w=1935&auto=format&fit=crop"
     }
 ]
