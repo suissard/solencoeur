@@ -164,7 +164,7 @@ header {
     bottom: 0;
     background-size: cover;
     background-position: center;
-    opacity: 0.3;
+    opacity: 0.8;
     z-index: 0;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     height: 100%;
