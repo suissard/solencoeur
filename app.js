@@ -73,9 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <p class="text-light"><small>Publié le ${new Date(item.date).toLocaleDateString('fr-FR')}</small></p>
                                 <p>${item.excerpt}</p>
                             </div>
-                            <div class="card-background" style="background-image: url('${item.imageUrl}')"></div>
-                            <div class="card-actions">
-                                <a href="article.html?id=${item.id}" class="btn btn-secondary">Lire la suite</a>
+                            <div class="card-footer">
+                                <div class="card-background" style="background-image: url('${item.imageUrl}')"></div>
+                                <div class="card-actions">
+                                    <a href="article.html?id=${item.id}" class="btn btn-secondary">Lire la suite</a>
+                                </div>
                             </div>
                         </article>
                     `;

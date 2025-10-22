@@ -147,28 +147,37 @@ header {
 .card-content {
     padding: 24px;
     flex-grow: 1;
+    background-color: var(--color-surface); /* Assurer un fond solide pour le texte */
 }
-.card-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 16px 24px;
-    border-top: 1px solid #eee;
-    z-index: 1;
+
+.card-footer {
     position: relative;
+    overflow: hidden; /* Pour que le border-radius du background s'applique */
+    border-top: 1px solid #eee;
 }
 
 .card-background {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    bottom: 0;
     background-size: cover;
     background-position: center;
     opacity: 0.3;
     z-index: 0;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
+    height: 100%;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px 24px;
+    position: relative;
+    z-index: 1;
+    background-color: transparent; /* Le fond est géré par card-background */
 }
 
 #accueil .card-actions .btn {
