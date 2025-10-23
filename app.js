@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="card-content">
                                 <h3>${item.title}</h3>
                                 <p class="text-light"><small>Publié le ${new Date(item.date).toLocaleDateString('fr-FR')}</small></p>
-                                <p>${item.excerpt}</p>
+                                <p class="card-excerpt">${item.excerpt}</p>
                             </div>
                             <div class="card-footer">
                                 <div class="card-background" style="background-image: url('${item.imageUrls[0]}')"></div>
@@ -227,28 +227,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container || !leftBtn || !rightBtn) return;
 
         const scrollToNextItem = (direction) => {
-            const items = container.querySelectorAll('.card');
-            if (items.length === 0) return;
-
-            const currentScroll = container.scrollLeft;
-            let targetItem = null;
-
+            // Scroll by half the container's visible width
+            const scrollAmount = container.clientWidth / 2;
             if (direction === 'right') {
-                targetItem = Array.from(items).find(item => {
-                    return item.offsetLeft > currentScroll + 1;
-                });
-            } else { // direction === 'left'
-                const visibleItems = Array.from(items).filter(item => {
-                    return item.offsetLeft < currentScroll - 1;
-                });
-                targetItem = visibleItems.length > 0 ? visibleItems[visibleItems.length - 1] : items[0];
-            }
-
-            if (targetItem) {
-                container.scrollTo({
-                    left: targetItem.offsetLeft,
-                    behavior: 'smooth'
-                });
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             }
         };
 
