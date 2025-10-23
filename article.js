@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         par <strong>${article.author}</strong>
                     </p>
                 </div>
-                <img src="${article.imageUrl}" alt="Image pour ${article.title}" class="article-image">
+                <div class="article-image-gallery">
+                    ${article.imageUrls.map(url => `<img src="${url}" alt="Image pour ${article.title}" class="article-image">`).join('')}
+                </div>
                 <div class="article-body">
                     ${article.content}
                 </div>
