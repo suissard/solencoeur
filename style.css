@@ -117,6 +117,12 @@ header {
     border-bottom-color: var(--color-primary);
 }
 
+#main-nav .nav-button {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
 /* --- Mobile Menu (Caché par défaut) --- */
 #mobile-menu-btn {
     display: none;
@@ -395,12 +401,28 @@ footer a:hover {
     resize: vertical;
 }
 
+.media-card-content {
+    padding: 16px 24px 0px 24px;
+}
+
 /* --- Parallax Sections --- */
 section {
     position: relative;
     overflow: hidden;
     scroll-margin-top: 70px;
     background-color: var(--color-surface);
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-buttons .btn {
+    flex-grow: 1;
+    max-width: 300px;
 }
 
 .parallax-bg {

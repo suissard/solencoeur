@@ -102,31 +102,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const photosHTML = photos.map(photo => `
                 <div class="card">
-                    <img src="${photo.url}" alt="${photo.title}" style="width:100%; height:auto;">
-                    <div class="card-content">
+                    <div class="card-content media-card-content">
                         <h3>${photo.title}</h3>
                     </div>
+                    <img src="${photo.url}" alt="${photo.title}" style="width:100%; height:auto;">
                 </div>
             `).join('');
 
             const videosHTML = videos.map(video => `
                 <div class="card">
+                    <div class="card-content media-card-content">
+                        <h3>${video.title}</h3>
+                    </div>
                     <div class="video-container">
                         <iframe src="${video.embedUrl}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-content">
-                        <h3>${video.title}</h3>
                     </div>
                 </div>
             `).join('');
 
             const audioHTML = audio.map(item => `
                 <div class="card">
+                    <div class="card-content media-card-content">
+                        <h3>${item.title}</h3>
+                    </div>
                     <div class="video-container">
                         <iframe src="${item.playerUrl}" allow="autoplay" style="width:100%; height:100px;"></iframe>
-                    </div>
-                    <div class="card-content">
-                        <h3>${item.title}</h3>
                     </div>
                 </div>
             `).join('');
