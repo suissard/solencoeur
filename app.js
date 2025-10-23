@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <p>${item.excerpt}</p>
                             </div>
                             <div class="card-footer">
-                                <div class="card-background" style="background-image: url('${item.imageUrl}')"></div>
+                                <div class="card-background" style="background-image: url('${item.imageUrls[0]}')"></div>
                                 <div class="card-actions">
                                     <a href="article.html?id=${item.id}" class="btn btn-secondary">Lire la suite</a>
                                 </div>

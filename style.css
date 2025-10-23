@@ -16,7 +16,7 @@
 
 /* --- Base & Accessibilité --- */
 body {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Lexend Deca', 'Poppins', sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
     margin: 0;
