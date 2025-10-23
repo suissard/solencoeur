@@ -233,6 +233,22 @@ header {
     background-color: #f0f0f0;
 }
 
+.btn-icon {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 0 !important;
+}
+
+.btn-icon svg {
+    margin: 0;
+}
+
 /* --- Grilles (Blog, Agenda) --- */
 .grid-container {
     display: grid;
