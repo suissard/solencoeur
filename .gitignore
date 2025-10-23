@@ -4,3 +4,6 @@ server.log
 # Fichiers temporaires de l'IDE ou du système
 .DS_Store
 Thumbs.db
+
+# Dépendances Node.js
+node_modules/

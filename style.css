@@ -164,6 +164,9 @@ header {
     background-color: var(--color-surface); /* Assurer un fond solide pour le texte */
 }
 
+.card-title {
+    padding: 16px 24px 0;
+    margin: 0;
 .media-card .card-content {
     flex-grow: 0;
     padding-bottom: 0;
@@ -197,15 +200,12 @@ header {
     position: relative;
     z-index: 1;
     background-color: transparent; /* Le fond est géré par card-background */
+    align-items: center;
 }
 
 #accueil .card-actions .btn {
     flex-grow: 1;
     flex-basis: 200px;
-}
-
-#accueil .card-actions {
-    align-items: center;
 }
 
 .btn-icon {
