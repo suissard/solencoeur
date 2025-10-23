@@ -311,33 +311,20 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--color-text);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
     border: none;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
+    padding: 10px;
     cursor: pointer;
-    z-index: 10;
-    box-shadow: var(--shadow-1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
 }
-
-.scroll-btn:hover {
-    background-color: white;
-    box-shadow: var(--shadow-2);
-}
-
 
 .scroll-btn.left {
-    left: 10px;
+    left: 0;
 }
 
 .scroll-btn.right {
-    right: 10px;
+    right: 0;
 }
 
 /* --- Video Iframe --- */
@@ -388,60 +375,28 @@ footer a:hover {
 
 /* --- Responsive (Mobile) --- */
 @media (max-width: 800px) {
-    .nav-container {
-        flex-wrap: wrap;
-    }
-
     #main-nav {
-        display: none; /* Caché par défaut */
-        order: 3; /* Pour qu'il apparaisse sous le logo et le bouton */
+        display: none; /* Caché */
+        position: absolute;
+        top: 70px;
+        left: 0;
         width: 100%;
-        flex-basis: 100%;
+        background-color: var(--color-surface);
+        box-shadow: var(--shadow-1);
     }
-
     #main-nav.open {
-        display: block; /* Affiché quand le menu est ouvert */
+        display: block; /* Affiché */
     }
-
     #main-nav ul {
         flex-direction: column;
-        padding: 10px 0;
     }
-
-    #main-nav a, #main-nav .nav-button {
+    #main-nav a {
         padding: 15px;
         text-align: center;
         border-bottom: 1px solid #f0f0f0;
-        border-radius: 0;
-        width: 100%;
-        box-sizing: border-box;
     }
-    #main-nav li:last-child a {
-        border-bottom: none;
-    }
-
     #mobile-menu-btn {
-        display: block; /* Affiché sur mobile */
-    }
-
-    #news-list .card, #media-gallery .card {
-        min-width: 280px; /* Taille réduite pour les petits écrans */
-        width: calc(100vw - 40px);
-    }
-
-    /* Empêcher les boutons de s'étirer démesurément */
-    .card-actions {
-        justify-content: center;
-    }
-
-    #accueil .card-actions .btn,
-    #contact .card-actions .btn {
-        flex-basis: auto; /* Permet aux boutons de prendre leur largeur naturelle */
-        flex-grow: 0;
-    }
-
-    section .container {
-        padding: 20px;
+        display: block; /* Affiché */
     }
 }
 
