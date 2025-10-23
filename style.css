@@ -167,6 +167,9 @@ header {
 .card-title {
     padding: 16px 24px 0;
     margin: 0;
+.media-card .card-content {
+    flex-grow: 0;
+    padding-bottom: 0;
 }
 
 .card-footer {
