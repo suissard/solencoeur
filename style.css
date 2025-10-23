@@ -117,20 +117,6 @@ header {
     border-bottom-color: var(--color-primary);
 }
 
-#main-nav .nav-button {
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: 4px;
-    padding: 10px 15px;
-    border-bottom: none;
-}
-
-#main-nav .nav-button:hover {
-    background-color: var(--color-primary-dark);
-    color: white;
-    border-bottom: none;
-}
-
 /* --- Mobile Menu (Caché par défaut) --- */
 #mobile-menu-btn {
     display: none;
@@ -162,11 +148,6 @@ header {
     padding: 24px;
     flex-grow: 1;
     background-color: var(--color-surface); /* Assurer un fond solide pour le texte */
-}
-
-.media-card .card-content {
-    flex-grow: 0;
-    padding-bottom: 0;
 }
 
 .card-footer {
@@ -202,20 +183,6 @@ header {
 #accueil .card-actions .btn {
     flex-grow: 1;
     flex-basis: 200px;
-}
-
-#accueil .card-actions {
-    align-items: center;
-}
-
-.btn-icon {
-    flex-grow: 0 !important;
-    width: 44px;
-    height: 44px;
-    padding: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* --- Boutons (Material) --- */
@@ -366,11 +333,6 @@ footer a:hover {
     display: inline-flex;
     align-items: center;
     gap: 8px; /* Espace entre l'icône et le texte */
-}
-
-#contact .card-actions .btn {
-    flex-grow: 1;
-    flex-basis: 200px;
 }
 
 /* --- Responsive (Mobile) --- */
