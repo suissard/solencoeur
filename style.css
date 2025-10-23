@@ -117,6 +117,20 @@ header {
     border-bottom-color: var(--color-primary);
 }
 
+#main-nav .nav-button {
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 4px;
+    padding: 10px 15px;
+    border-bottom: none;
+}
+
+#main-nav .nav-button:hover {
+    background-color: var(--color-primary-dark);
+    color: white;
+    border-bottom: none;
+}
+
 /* --- Mobile Menu (Caché par défaut) --- */
 #mobile-menu-btn {
     display: none;
@@ -150,6 +164,11 @@ header {
     background-color: var(--color-surface); /* Assurer un fond solide pour le texte */
 }
 
+.card-title {
+    padding: 16px 24px 0;
+    margin: 0;
+}
+
 .card-footer {
     position: relative;
     overflow: hidden; /* Pour que le border-radius du background s'applique */
@@ -178,11 +197,22 @@ header {
     position: relative;
     z-index: 1;
     background-color: transparent; /* Le fond est géré par card-background */
+    align-items: center;
 }
 
 #accueil .card-actions .btn {
     flex-grow: 1;
     flex-basis: 200px;
+}
+
+.btn-icon {
+    flex-grow: 0 !important;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* --- Boutons (Material) --- */
@@ -333,6 +363,11 @@ footer a:hover {
     display: inline-flex;
     align-items: center;
     gap: 8px; /* Espace entre l'icône et le texte */
+}
+
+#contact .card-actions .btn {
+    flex-grow: 1;
+    flex-basis: 200px;
 }
 
 /* --- Responsive (Mobile) --- */
