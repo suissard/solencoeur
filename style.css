@@ -384,6 +384,9 @@ footer a:hover {
     #mobile-menu-btn {
         display: block; /* Affiché */
     }
+    #main-nav .nav-button {
+        justify-content: center;
+    }
 }
 
 /* --- Loader --- */
