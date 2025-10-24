@@ -42,24 +42,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
             document.title = `${article.title} - Solencoeur`;
 
+            const imageUrlsArray = Array.isArray(article.imageUrls) ? article.imageUrls : (article.imageUrls ? [article.imageUrls] : []);
+
             // Déterminer le contenu de la galerie d'images
             let imageGalleryHTML = '';
-            if (article.imageUrls && article.imageUrls.length > 1) {
+            if (imageUrlsArray.length > 1) {
                 // Créer un carrousel s'il y a plus d'une image
                 imageGalleryHTML = `
                     <div class="container-full-width">
                         <div class="scroll-container">
                             <button class="scroll-btn left article-scroll-btn">&lt;</button>
                             <div id="article-image-gallery" class="image-gallery-scroll">
-                                ${article.imageUrls.map(url => `<img src="${url}" alt="Image pour ${article.title}" class="article-image">`).join('')}
+                                ${imageUrlsArray.map(url => `<img src="${url}" alt="Image pour ${article.title}" class="article-image">`).join('')}
                             </div>
                             <button class="scroll-btn right article-scroll-btn">&gt;</button>
                         </div>
                     </div>
                 `;
-            } else if (article.imageUrls && article.imageUrls.length === 1) {
+            } else if (imageUrlsArray.length === 1) {
                 // Afficher une seule image si une seule URL est fournie
-                imageGalleryHTML = `<img src="${article.imageUrls[0]}" alt="Image pour ${article.title}" class="article-image-single">`;
+                imageGalleryHTML = `<img src="${imageUrlsArray[0]}" alt="Image pour ${article.title}" class="article-image-single">`;
             }
 
 
