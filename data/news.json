@@ -1,66 +1,34 @@
 [
     {
-        "id": "concert-printemps-2025",
-        "type": "article",
-        "title": "Concert de Printemps Annuel",
-        "date": "2025-05-20",
-        "excerpt": "Revivez les moments forts de notre concert annuel qui a célébré la diversité musicale et le vivre ensemble.",
-        "imageUrls": ["https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop"]
-    },
-    {
-        "id": "atelier-decouverte-chant",
-        "type": "article",
-        "title": "Atelier Découverte du Chant Choral",
-        "date": "2025-04-15",
-        "excerpt": "La semaine dernière, nous avons ouvert nos portes pour un atelier d'initiation gratuit. Une expérience riche en émotions et en partage !",
-        "imageUrls": ["https://images.unsplash.com/photo-1527479734767-ecc064f857b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
-    },
-    {
-        "id": "nouveau-repertoire-2025",
-        "type": "article",
-        "title": "Nouveau Répertoire 2025",
-        "date": "2025-03-01",
-        "excerpt": "Découvrez en avant-première les pépites musicales que nous vous préparons pour la saison à venir.",
-        "imageUrls": ["https://images.unsplash.com/photo-1613142659418-718b2ae6940d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
-    },
-    {
-        "id": "portrait-choriste-jean",
-        "type": "article",
-        "title": "Rencontre avec Jean, Baryton",
-        "date": "2025-02-10",
-        "excerpt": "Plongez dans le quotidien d'un de nos membres passionnés. Jean nous raconte son parcours et ce que Solencoeur lui apporte.",
-        "imageUrls": ["https://images.unsplash.com/photo-1437855144889-40d3933d96a1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
-    },
-    {
         "id": "concert-maison-retraite-tarbes",
         "type": "article",
-        "title": "Concert à la Maison de Retraite",
+        "title": "Concert à la Maison de Retraite de Tarbes",
         "date": "2025-09-29",
-        "excerpt": "Notre premier concert de l'année 2025- 2026 . Bises à toutes et tous . A bientôt 🎶💜",
-        "imageUrls": ["https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop"]
+        "excerpt": "🎸💕 Nous avons chanté pour les résidents d'une maison de retraite à Tarbes le week-end dernier . Notre premier concert de l'année 2025- 2026 . Bises à toutes et tous . A bientôt 🎶💜",
+        "imageUrls": ["https://images.unsplash.com/photo-1482627988233-7c68311232ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
     },
     {
         "id": "reprise-repetitions-septembre-2025",
         "type": "article",
-        "title": "Reprise des Répétitions",
+        "title": "Reprise des répétitions en septembre",
         "date": "2025-09-11",
-        "excerpt": "à la Maison des Associations quartier de l'arsenal à Tarbes à partir de 17h45 jusqu'à 19h30 . A demain. Bises .🎵 🎶 💖",
-        "imageUrls": ["https://images.unsplash.com/photo-1558514112-320b28a95d73?q=80&w=1935&auto=format&fit=crop"]
+        "excerpt": "🎸 🎶 💜 Demain vendredi 12 septembre 2025 , nous reprenons nos répétitions à la Maison des Associations quartier de l'arsenal à Tarbes à partir de 17h45 jusqu'à 19h30 . A demain. Bises .🎵 🎶 💖",
+        "imageUrls": ["https://images.unsplash.com/photo-1482627988233-7c68311232ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
     },
     {
         "id": "pique-nique-adour",
         "type": "article",
-        "title": "Pique-nique sur les Berges de l'Adour",
+        "title": "Pique-nique estival sur les berges de l'Adour",
         "date": "2025-08-26",
-        "excerpt": "pour pique-niquer et chanter accompagnés de nos 2 guitaristes. Un temps clément et le bonheur d'être ensemble pour partager notre passion : le chant choral. A bientôt pour la reprise le 12 septembre. Bises à toutes et tous. ♥️ 🎸 🎶 🪷",
-        "imageUrls": ["https://images.unsplash.com/photo-1586522994269-637999a8885a?q=80&w=2070&auto=format&fit=crop"]
+        "excerpt": "💕 🎵 🎶 Coucou à toutes et tous, Nous nous sommes retrouvés la semaine dernière près des berges de l'Adour pour pique-niquer et chanter accompagnés de nos 2 guitaristes. Un temps clément et le bonheur d'être ensemble pour partager notre passion : le chant choral. A bientôt pour la reprise le 12 septembre. Bises à toutes et tous. ♥️ 🎸 🎶 🪷",
+        "imageUrls": ["https://images.unsplash.com/photo-1482627988233-7c68311232ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
     },
     {
         "id": "vacances-pique-nique",
         "type": "article",
-        "title": "Pique-nique Estival en Chansons",
+        "title": "Pique-nique en chansons pendant les vacances",
         "date": "2025-08-18",
-        "excerpt": "autour d'un pique-nique bien sûr, accompagné de chansons .🎸💕 ❣️A bientôt et bises à toutes et tous. 👋",
-        "imageUrls": ["https://images.unsplash.com/photo-1525183392-4b7072a2b2d1?q=80&w=2070&auto=format&fit=crop"]
+        "excerpt": "🎶 💜 Nous sommes toujours en vacances. Nous allons nous retrouver pour partager un délicieux moment en fin de semaine autour d'un pique-nique bien sûr, accompagné de chansons .🎸💕 ❣️A bientôt et bises à toutes et tous. 👋",
+        "imageUrls": ["https://images.unsplash.com/photo-1482627988233-7c68311232ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
     }
 ]
