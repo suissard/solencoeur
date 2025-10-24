@@ -2,65 +2,81 @@
     {
         "id": "concert-printemps-2025",
         "type": "article",
-        "title": "Concert de Printemps Annuel",
+        "title": "Succès Retentissant pour notre Concert de Printemps !",
         "date": "2025-05-20",
         "excerpt": "Revivez les moments forts de notre concert annuel qui a célébré la diversité musicale et le vivre ensemble.",
-        "imageUrls": ["https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop"]
+        "imageUrls": ["https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1593697821088-39392b953835?q=80&w=2070&auto=format&fit=crop"],
+        "author": "Le Bureau de Solencoeur",
+        "content": "<p>Quelle soirée mémorable ! Le 18 mai dernier, notre grand concert de printemps a réuni plus de 200 personnes à la salle des fêtes de Tarbes. Sous la direction inspirée de notre cheffe de chœur, nous avons interprété un répertoire éclectique, allant des chants traditionnels bigourdans à des classiques de la variété française, en passant par des rythmes africains endiablés.</p><p>L'énergie du public était palpable et vos applaudissements chaleureux ont été notre plus belle récompense. Cet événement a été l'aboutissement de mois de travail et de passion, et il incarne parfaitement les valeurs de partage qui nous sont chères.</p><p>Un immense merci à tous les bénévoles, à la mairie de Tarbes pour son soutien logistique, et bien sûr, à vous, cher public, d'être venus si nombreux. Rendez-vous l'année prochaine pour de nouvelles aventures musicales !</p>"
     },
     {
         "id": "atelier-decouverte-chant",
         "type": "article",
-        "title": "Atelier Découverte du Chant Choral",
+        "title": "Atelier Découverte : Une Journée d'Initiation au Chant Choral",
         "date": "2025-04-15",
         "excerpt": "La semaine dernière, nous avons ouvert nos portes pour un atelier d'initiation gratuit. Une expérience riche en émotions et en partage !",
-        "imageUrls": ["https://images.unsplash.com/photo-1527479734767-ecc064f857b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
+        "imageUrls": ["https://images.unsplash.com/photo-1593697821088-39392b953835?q=80&w=2070&auto=format&fit=crop"],
+        "author": "Claire, Cheffe de Chœur",
+        "content": "<p>Le 12 avril, Solencoeur a eu le plaisir d'accueillir une quinzaine de participants curieux pour une journée d'initiation au chant choral. L'objectif ? Démystifier le chant en groupe et montrer que tout le monde peut chanter !</p><p>Entre exercices de respiration ludiques, jeux vocaux et l'apprentissage d'un canon simple à plusieurs voix, les sourires et les rires ont fusé. Beaucoup ont été surpris de découvrir leur propre voix et le plaisir de la faire vibrer à l'unisson avec d'autres. Ce fut un moment de cohésion et de bienveillance, où la performance a laissé place à la simple joie de chanter ensemble.</p><p>Nous espérons que cette expérience aura suscité des vocations. N'hésitez pas à nous contacter si l'aventure vous tente !</p>"
     },
     {
         "id": "nouveau-repertoire-2025",
         "type": "article",
-        "title": "Nouveau Répertoire 2025",
+        "title": "Nouveau Répertoire 2025 : Un Voyage Musical en Perspective",
         "date": "2025-03-01",
         "excerpt": "Découvrez en avant-première les pépites musicales que nous vous préparons pour la saison à venir.",
-        "imageUrls": ["https://images.unsplash.com/photo-1613142659418-718b2ae6940d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
+        "imageUrls": ["https://images.unsplash.com/photo-1507838153414-006de08337da?q=80&w=2070&auto=format&fit=crop"],
+        "author": "Le Bureau de Solencoeur",
+        "content": "<p>Qui dit nouvelle saison, dit nouveau répertoire ! L'équipe musicale de Solencoeur travaille d'arrache-pied pour vous concocter un programme 2025 riche et surprenant. Cette année, nous mettons le cap sur l'Amérique Latine, avec des rythmes de cumbia, de bossa nova et de tango qui vous feront voyager.</p><p>Nous n'oublions pas pour autant nos racines, avec de nouvelles harmonisations de chansons françaises intemporelles (saurez-vous deviner lesquelles ?) et quelques chants du monde qui sont la marque de fabrique de notre chœur.</p><p>Les partitions sont distribuées, les premières notes résonnent... Nous avons hâte de vous partager le fruit de notre travail ! Restez à l'écoute pour les dates de nos prochains concerts.</p>"
     },
     {
         "id": "portrait-choriste-jean",
         "type": "article",
-        "title": "Rencontre avec Jean, Baryton",
+        "title": "Rencontre avec Jean, Baryton et Pilier de l'Association",
         "date": "2025-02-10",
         "excerpt": "Plongez dans le quotidien d'un de nos membres passionnés. Jean nous raconte son parcours et ce que Solencoeur lui apporte.",
-        "imageUrls": ["https://images.unsplash.com/photo-1437855144889-40d3933d96a1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&fm=jpg&q=60&w=3000"]
+        "imageUrls": ["https://images.unsplash.com/photo-1558514112-320b28a95d73?q=80&w=1935&auto=format&fit=crop"],
+        "author": "La Rédac'",
+        "content": "<p>Jean, 68 ans, est l'une des voix de baryton que vous pouvez entendre au sein de Solencoeur, et ce, depuis presque la création de l'association. Pour lui, le chœur est bien plus qu'un simple hobby : 'C'est mon bol d'air de la semaine', nous confie-t-il. 'On laisse les soucis à la porte, et pendant deux heures, il n'y a que la musique et la camaraderie qui comptent.'</p><p>Ce qu'il préfère ? 'Le moment magique où les quatre pupitres s'assemblent et où l'harmonie prend forme. C'est un sentiment indescriptible.' Son meilleur souvenir reste le concert en plein air de l'été dernier, 'un moment de grâce partagé avec un public formidable'.</p><p>À travers le témoignage de Jean, c'est l'esprit de Solencoeur qui s'exprime : un mélange de rigueur musicale, de solidarité et, surtout, de beaucoup de chaleur humaine.</p>"
     },
     {
         "id": "concert-maison-retraite-tarbes",
         "type": "article",
-        "title": "Concert à la Maison de Retraite",
+        "title": "🎸💕 Nous avons chanté pour les résidents d'une maison de retraite à Tarbes le week-end dernier",
         "date": "2025-09-29",
         "excerpt": "Notre premier concert de l'année 2025- 2026 . Bises à toutes et tous . A bientôt 🎶💜",
-        "imageUrls": ["https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop"]
+        "imageUrls": ["https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop"],
+        "author": "Le Bureau de Solencoeur",
+        "content": "<p>🎸💕 Nous avons chanté pour les résidents d'une maison de retraite à Tarbes le week-end dernier . Notre premier concert de l'année 2025- 2026 . Bises à toutes et tous . A bientôt 🎶💜</p>"
     },
     {
         "id": "reprise-repetitions-septembre-2025",
         "type": "article",
-        "title": "Reprise des Répétitions",
+        "title": "🎸 🎶 💜 Demain vendredi 12 septembre 2025 , nous reprenons nos répétitions",
         "date": "2025-09-11",
         "excerpt": "à la Maison des Associations quartier de l'arsenal à Tarbes à partir de 17h45 jusqu'à 19h30 . A demain. Bises .🎵 🎶 💖",
-        "imageUrls": ["https://images.unsplash.com/photo-1558514112-320b28a95d73?q=80&w=1935&auto=format&fit=crop"]
+        "imageUrls": ["https://images.unsplash.com/photo-1558514112-320b28a95d73?q=80&w=1935&auto=format&fit=crop"],
+        "author": "Le Bureau de Solencoeur",
+        "content": "<p>🎸 🎶 💜 Demain vendredi 12 septembre 2025 , nous reprenons nos répétitions à la Maison des Associations quartier de l'arsenal à Tarbes à partir de 17h45 jusqu'à 19h30 .</p><p>A demain. Bises .🎵 🎶 💖</p>"
     },
     {
         "id": "pique-nique-adour",
         "type": "article",
-        "title": "Pique-nique sur les Berges de l'Adour",
+        "title": "💕 🎵 🎶 Coucou à toutes et tous, Nous nous sommes retrouvés la semaine dernière près des berges de l'Adour",
         "date": "2025-08-26",
         "excerpt": "pour pique-niquer et chanter accompagnés de nos 2 guitaristes. Un temps clément et le bonheur d'être ensemble pour partager notre passion : le chant choral. A bientôt pour la reprise le 12 septembre. Bises à toutes et tous. ♥️ 🎸 🎶 🪷",
-        "imageUrls": ["https://images.unsplash.com/photo-1586522994269-637999a8885a?q=80&w=2070&auto=format&fit=crop"]
+        "imageUrls": ["https://images.unsplash.com/photo-1586522994269-637999a8885a?q=80&w=2070&auto=format&fit=crop"],
+        "author": "Le Bureau de Solencoeur",
+        "content": "<p>💕 🎵 🎶 Coucou à toutes et tous,</p><p>Nous nous sommes retrouvés la semaine dernière près des berges de l'Adour pour pique-niquer et chanter accompagnés de nos 2 guitaristes.</p><p>Un temps clément et le bonheur d'être ensemble pour partager notre passion : le chant choral.</p><p>A bientôt pour la reprise le 12 septembre.</p><p>Bises à toutes et tous. ♥️ 🎸 🎶 🪷</p>"
     },
     {
         "id": "vacances-pique-nique",
         "type": "article",
-        "title": "Pique-nique Estival en Chansons",
+        "title": "🎶 💜 Nous sommes toujours en vacances. Nous allons nous retrouver pour partager un délicieux moment en fin de semaine",
         "date": "2025-08-18",
         "excerpt": "autour d'un pique-nique bien sûr, accompagné de chansons .🎸💕 ❣️A bientôt et bises à toutes et tous. 👋",
-        "imageUrls": ["https://images.unsplash.com/photo-1525183392-4b7072a2b2d1?q=80&w=2070&auto=format&fit=crop"]
+        "imageUrls": ["https://images.unsplash.com/photo-1525183392-4b7072a2b2d1?q=80&w=2070&auto=format&fit=crop"],
+        "author": "Le Bureau de Solencoeur",
+        "content": "<p>🎶 💜 Nous sommes toujours en vacances. Nous allons nous retrouver pour partager un délicieux moment en fin de semaine autour d'un pique-nique  bien sûr, accompagné de chansons .🎸💕</p><p>❣️A bientôt et bises à toutes et tous. 👋</p>"
     }
 ]

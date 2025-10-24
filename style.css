@@ -250,6 +250,10 @@ header {
     background-color: #f0f0f0;
 }
 
+.btn-no-shadow {
+    box-shadow: none !important;
+}
+
 .btn-icon {
     width: 44px;
     height: 44px;

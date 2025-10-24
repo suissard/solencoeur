@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 2. Charger le fichier JSON des articles
-            const response = await fetch('data/articles.json');
+            const response = await fetch('data/news.json');
             const articles = await response.json();
 
             // 3. Trouver le bon article
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         par <strong>${article.author}</strong>
                     </p>
                 </div>
-                <div class="article-image-gallery">
-                    ${article.imageUrls.map(url => `<img src="${url}" alt="Image pour ${article.title}" class="article-image">`).join('')}
+                <div id="article-media-container">
+                    <!-- Le contenu sera injecté ici -->
                 </div>
                 <div class="article-body">
                     ${article.content}
@@ -47,10 +47,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
 
+            const mediaContainer = document.getElementById('article-media-container');
+
+            if (article.imageUrls && article.imageUrls.length > 1) {
+                // S'il y a plusieurs images, créer un carrousel
+                mediaContainer.innerHTML = `
+                    <div class="article-carousel-container">
+                        <button class="scroll-btn left article-scroll-btn">&lt;</button>
+                        <div class="article-image-gallery">
+                            ${article.imageUrls.map(url => `<img src="${url}" alt="Image pour ${article.title}" class="article-image">`).join('')}
+                        </div>
+                        <button class="scroll-btn right article-scroll-btn">&gt;</button>
+                    </div>
+                `;
+                setupCarousel('.article-image-gallery', '.article-scroll-btn.left', '.article-scroll-btn.right');
+            } else if (article.imageUrls && article.imageUrls.length === 1) {
+                // S'il n'y a qu'une seule image
+                mediaContainer.innerHTML = `<img src="${article.imageUrls[0]}" alt="Image pour ${article.title}" class="article-image single-image">`;
+            }
+
         } catch (error) {
             console.error('Erreur lors du chargement de l\'article:', error);
             articleContainer.innerHTML = '<p>Une erreur est survenue lors du chargement de l\'article.</p>';
         }
+    }
+
+    function setupCarousel(containerSelector, leftBtnSelector, rightBtnSelector) {
+        const container = document.querySelector(containerSelector);
+        const leftBtn = document.querySelector(leftBtnSelector);
+        const rightBtn = document.querySelector(rightBtnSelector);
+
+        if (!container || !leftBtn || !rightBtn) return;
+
+        const scrollToNextItem = (direction) => {
+            const scrollAmount = container.clientWidth;
+            if (direction === 'right') {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+        };
+
+        leftBtn.addEventListener('click', () => scrollToNextItem('left'));
+        rightBtn.addEventListener('click', () => scrollToNextItem('right'));
     }
 
     loadArticle();
