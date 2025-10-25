@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container) return;
 
         try {
-            const response = await fetch('data/news.json');
+            const response = await fetch('data/articles.json');
             const newsData = await response.json();
 
             const sortedNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.date));
