@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const scrollToNextItem = (direction) => {
             // Scroll by half the container's visible width
-            const scrollAmount = container.clientWidth / 2;
+            const scrollAmount = container.clientWidth;
             if (direction === 'right') {
                 container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             } else {
