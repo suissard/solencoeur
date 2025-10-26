@@ -96,6 +96,13 @@ header {
     font-weight: 700;
     color: var(--color-primary);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
 }
 #main-nav ul {
     display: flex;
@@ -401,6 +408,15 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
+}
+
+footer .footer-logo {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.footer-branding {
+    margin-top: 20px;
 }
 
 .social-links a {
