@@ -100,13 +100,8 @@ header {
     align-items: center;
 }
 
-.logo-svg {
-    display: inline-block;
-    width: 40px;
+.logo img {
     height: 40px;
-    background-color: var(--color-primary);
-    -webkit-mask: url(data/file.svg) no-repeat center;
-    mask: url(data/file.svg) no-repeat center;
     margin-right: 10px;
 }
 #main-nav ul {
