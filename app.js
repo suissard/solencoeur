@@ -45,12 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const sortedNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.date));
 
+            const facebookCardHTML = `
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Suivez-nous sur Facebook !</h3>
+                        <p>Pour ne rien manquer de nos dernières actualités, concerts et répétitions, rejoignez-nous sur notre page Facebook.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.facebook.com/share/17KzQFFdR2/" target="_blank" rel="noopener" class="btn btn-primary">Visiter notre page</a>
+                    </div>
+                </article>
+            `;
+
             if (sortedNews.length === 0) {
-                container.innerHTML = "<p>Aucune actualité pour le moment.</p>";
+                container.innerHTML = facebookCardHTML;
                 return;
             }
 
-            container.innerHTML = sortedNews.map(item => {
+            const newsHTML = sortedNews.map(item => {
                 if (item.type === 'event') {
                     return `
                         <article class="card">
@@ -83,78 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                 }
             }).join('');
+
+            container.innerHTML = facebookCardHTML + newsHTML;
         } catch (error) {
             console.error('Failed to load news data:', error);
             container.innerHTML = "<p>Erreur lors du chargement des actualités.</p>";
-        }
-    }
-
-    async function loadMedia() {
-        const container = document.getElementById('media-gallery');
-        if (!container) return;
-        try {
-            const response = await fetch('config.json');
-            const config = await response.json();
-            const photos = config.media.photos || [];
-            const videos = config.media.videos || [];
-            const audio = config.media.audio || [];
-            const documents = config.media.documents || [];
-
-            const photosHTML = photos.map(photo => `
-                <div class="card">
-                    <div class="card-content media-card-content">
-                        <h3>${photo.title}</h3>
-                    </div>
-                    <img src="${photo.url}" alt="${photo.title}" style="width:100%; height:auto;">
-                </div>
-            `).join('');
-
-            const videosHTML = videos.map(video => `
-                <div class="card">
-                    <div class="card-content media-card-content">
-                        <h3>${video.title}</h3>
-                    </div>
-                    <div class="video-container">
-                        <iframe src="${video.embedUrl}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            `).join('');
-
-            const audioHTML = audio.map(item => `
-                <div class="card">
-                    <div class="card-content media-card-content">
-                        <h3>${item.title}</h3>
-                    </div>
-                    <div class="video-container">
-                        <iframe src="${item.playerUrl}" allow="autoplay" style="width:100%; height:100px;"></iframe>
-                    </div>
-                </div>
-            `).join('');
-
-            const documentsHTML = documents.map(doc => `
-                <div class="card">
-                    <div class="card-content">
-                        <h3>${doc.title}</h3>
-                        <p>Cliquez pour voir le document.</p>
-                    </div>
-                    <div class="card-actions">
-                        <a href="${doc.documentUrl}" target="_blank" rel="noopener" class="btn btn-secondary">Ouvrir le document</a>
-                    </div>
-                </div>
-            `).join('');
-
-            const combinedHTML = photosHTML + videosHTML + audioHTML + documentsHTML;
-
-            if (combinedHTML) {
-                container.innerHTML = combinedHTML;
-            } else {
-                container.innerHTML = "<p>Aucun média disponible pour le moment.</p>";
-            }
-
-        }
-        catch (error) {
-            console.error('Failed to load media data:', error);
-            container.innerHTML = "<p>Erreur lors du chargement des médias.</p>";
         }
     }
     async function setupContactLink() {
@@ -214,10 +159,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loadNews();
-    loadMedia();
     setupContactLink();
     loadSupporters();
     loadBackgroundImages();
+    loadRadioPlayer();
+
+    async function loadRadioPlayer() {
+        const radioPlayer = document.getElementById('radio-player');
+        if (!radioPlayer) return;
+        try {
+            const response = await fetch('config.json');
+            const config = await response.json();
+            const radio = config.media.audio[0];
+            if(radio) {
+                radioPlayer.src = radio.playerUrl;
+            } else {
+                document.getElementById('radio-card').style.display = 'none';
+            }
+        } catch (error) {
+            console.error('Failed to load radio player:', error);
+            document.getElementById('radio-card').style.display = 'none';
+        }
+    }
 
     function setupCarousel(containerSelector, leftBtnSelector, rightBtnSelector) {
         const container = document.querySelector(containerSelector);
@@ -241,5 +204,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setupCarousel('#news-list', '.news-scroll-btn.left', '.news-scroll-btn.right');
-    setupCarousel('#media-gallery', '.media-scroll-btn.left', '.media-scroll-btn.right');
 });

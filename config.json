@@ -9,24 +9,14 @@
         "background": "#FDFEFE"
     },
     "media": {
-        "photos": [
-            { "url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop", "title": "Répétition" },
-            { "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop", "title": "Concert" },
-            { "url": "https://images.unsplash.com/photo-1507838153414-006de08337da?q=80&w=2070&auto=format&fit=crop", "title": "Ensemble" }
-        ],
-        "videos": [
-            { "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ", "title": "Chanson française classique" },
-            { "embedUrl": "https://www.youtube.com/embed/videoseries?list=PL20E8A5DE54D8C429", "title": "Compilation de classiques" }
-        ],
         "audio": [
             { "playerUrl": "https://drive.google.com/file/d/1cxZZnyUhZig_pbOUoVsCXYULJSzD6ZRn/preview", "title": "Émission de radio" }
-        ],
-        "documents": []
+        ]
     },
     "supporters": [
         { "name": "Ville de Tarbes", "logoUrl": "https://upload.wikimedia.org/wikipedia/fr/a/af/Logo_Ville_de_Tarbes.png" },
         { "name": "Région Occitanie", "logoUrl": "https://upload.wikimedia.org/wikipedia/fr/thumb/8/89/Logo_Occitanie_2017.svg/600px-Logo_Occitanie_2017.svg.png" },
-        { "name": "Préfecture des Hautes-Pyrénées", "logoUrl": "https://upload.wikimedia.org/wikipedia/fr/c/c8/Logo_65_hautes_pyr%C3%A9n%C3%A9es_2009.png" }
+        { "name": "Préfecture des Hautes-Pyrénées", "logoUrl": "https://upload.wikimedia.org/wikipedia/fr/4/44/Hautes-Pyr%C3%A9n%C3%A9es_%2865%29_logo_2017.svg" }
     ],
     "backgroundImages": {
         "accueil": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMG11c2ljfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000",
