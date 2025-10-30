@@ -525,3 +525,41 @@ section {
     background-attachment: fixed;
     filter: blur(2px);
 }
+
+/* --- Styles spécifiques à la carte Facebook --- */
+.card-facebook {
+    position: relative;
+    color: white;
+}
+.card-facebook .card-background {
+    background-blend-mode: multiply;
+    background-color: rgba(24, 119, 242, 0.8);
+    opacity: 1;
+    z-index: 0;
+}
+.card-facebook .card-content, .card-facebook .card-actions {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+.card-facebook h3, .card-facebook p {
+    color: white;
+}
+.card-facebook .card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.card-facebook .facebook-logo {
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+}
+.card-facebook .btn-primary {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1877F2;
+    font-weight: bold;
+}
+.card-facebook .btn-primary:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
