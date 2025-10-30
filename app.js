@@ -46,13 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const sortedNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.date));
 
             const facebookCardHTML = `
-                <article class="card">
+                <article class="card card-facebook">
+                    <div class="card-background" style="background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"></div>
                     <div class="card-content">
-                        <h3>Suivez-nous sur Facebook !</h3>
-                        <p>Pour ne rien manquer de nos dernières actualités, concerts et répétitions, rejoignez-nous sur notre page Facebook.</p>
+                        <div class="card-header">
+                            <svg class="facebook-logo" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+                            <h3>Suivez-nous !</h3>
+                        </div>
+                        <p>Pour ne rien manquer de nos dernières actualités, concerts et répétitions, rejoignez-nous sur notre page.</p>
                     </div>
                     <div class="card-actions">
-                        <a href="https://www.facebook.com/share/17KzQFFdR2/" target="_blank" rel="noopener" class="btn btn-primary">Visiter notre page</a>
+                        <a href="https://www.facebook.com/share/17KzQFFdR2/" target="_blank" rel="noopener" class="btn btn-primary">
+                            Rejoindre
+                        </a>
                     </div>
                 </article>
             `;
