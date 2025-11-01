@@ -3,36 +3,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mainNav = document.getElementById('main-nav');
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const navLinks = mainNav.querySelectorAll('a');
 
-    // Gestion du Menu Mobile
-    mobileMenuBtn.addEventListener('click', () => {
-        const isOpen = mainNav.classList.toggle('open');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-        mobileMenuBtn.querySelector('.material-icons').textContent = isOpen ? 'close' : 'menu';
-    });
+    if (mainNav && mobileMenuBtn) {
+        const navLinks = mainNav.querySelectorAll('a');
 
-    mainNav.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
-            mainNav.classList.remove('open');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            mobileMenuBtn.querySelector('.material-icons').textContent = 'menu';
-        }
-    });
+        // Gestion du Menu Mobile
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('open');
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+            mobileMenuBtn.querySelector('.material-icons').textContent = isOpen ? 'close' : 'menu';
+        });
 
-    // --- Smooth Scroll ---
-    navLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+        mainNav.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                mainNav.classList.remove('open');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.querySelector('.material-icons').textContent = 'menu';
             }
         });
-    });
+
+        // --- Smooth Scroll ---
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    }
 
     // --- Fonctions de rendu des données ---
     async function loadNews() {
@@ -169,6 +172,24 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSupporters();
     loadBackgroundImages();
     loadRadioPlayer();
+    setupMembershipLinks();
+
+    async function setupMembershipLinks() {
+        const memberLink = document.getElementById('member-link');
+        const choristerLink = document.getElementById('chorister-link');
+        if (!memberLink || !choristerLink) return;
+        try {
+            const response = await fetch('config.json');
+            const config = await response.json();
+            const membership = config.membership;
+            memberLink.href = membership.member;
+            choristerLink.href = membership.chorister;
+        } catch (error) {
+            console.error('Failed to setup membership links:', error);
+            memberLink.href = "#";
+            choristerLink.href = "#";
+        }
+    }
 
     async function loadRadioPlayer() {
         const radioPlayer = document.getElementById('radio-player');
